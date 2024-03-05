@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio aula 1</title>
+</head>
+<body>
+    <input id='produtos' type="text">
+    
+    <button onclick="adiciona()">Adicionar a lista</button>
+    
+    <h3>Lista de Produtos</h3>
+    
+    <div id="lista"></div>
+
+    <script>
+        var lista = document.getElementById('lista')
+        
+        function adiciona(){
+            var coisas = lista.innerHTML + '<br>' + document.getElementById('produtos').value;
+            lista.innerHTML = coisas;
+            document.getElementById('produtos').value = ''
+        }
+
+    </script>
+</body>
+</html>
