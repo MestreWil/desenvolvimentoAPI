@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício do retângulo</title>
+</head>
+<body>
+    Largura: <input type="text" id="txtLargura" /><br>
+    Altura: <input type="text" id="txtAltura"><br>
+    <button onclick="calcularArea()">Calcular</button>
+    <div id="result"></div>
+    <script>
+        function calcularArea(){
+            l = document.getElementById('txtLargura').value
+            a = document.getElementById('txtAltura').value
+            retangulo = {
+                largura : parseFloat(l),
+                altura : parseFloat(a),
+                area: function(){
+                    return this.largura * this.altura;
+                }
+            }
+        }
+
+        divResult =  document.getElementById('result')
+        divResult.innerText = 'Área: ' + retangulo.area()
+    </script> 
+</body>
+</html>
